@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <title>Challenge - Encriptador Alura</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Challenge - Encriptador Alura</title>
+</head>
 
-    <body class="bg-gray-800 text-white">
-        <header>
-            <h1 class="text-3xl font-bold underline">
-                Encriptador Alura
-            </h1>
-        </header>
-        <main class="py-6 px-4 sm:p-6 md:py-10 md:px-8">
-            <div class="max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2">
+<body class="bg-gray-800 text-white">
+    <header>
+        <h1 class="text-3xl font-bold underline">Encriptador Alura</h1>
+    </header>
+    <div class="flex">
+        <div class="w-full h-full mr-20">
+            <main class="flex-2">
                 <form>
                     <div class="flex flex-col">
-                        <label for="texto" class="text-xl font-bold">
-                            Texto a encriptar
-                        </label>
                         <textarea name="texto" placeholder="Ingrese el texto aqui" id="texto" cols="8" rows="15"
                             class="border-2 border-gray-600 rounded-lg bg-gray-700"></textarea>
                     </div>
-
                     <div>
                         <p class="text-gray-400 my-2">🛈 Solo se aceptan minusculas y sin acentos</p>
                     </div>
                     <!--Center the buttons-->
-                    <div class="flex justify-center">
+                    <div class="flex space-x-4 justify-center my-4">
                         <input type="submit" value="Encriptar"
-                            class="bg-blue-500 mx-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" />
                         <input type="submit" value="Desencriptar"
-                            class="bg-gray-700 mx-2 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded">
+                            class="bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded" />
                     </div>
-            </div>
-
-            </form>
-        </main>
-    </body>
+                </form>
+            </main>
+        </div
+        >
+        <div class="flex-1">
+            <aside class="flex-1 ml-40 mr-40 items-center justify-center">
+                <section
+                    class="w-96 h-96 border-2 border-gray-600 rounded-lg bg-gray-700 flex flex-col items-center justify-center">
+                    <h2 class="text-2xl font-bold mb-4">Resultado</h2>
+                    <h3 class="text-xl font-bold mb-4">Ningún mensaje fue encontrado</h3>
+                    <p class="text-gray-400 text-center">Ingrese el texto que deseas encriptar o desencriptar.</p>
+                </section>
+            </aside>
+        </div>
+    </div>
+</body>
 
 </html>
 
