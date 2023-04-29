@@ -2,50 +2,44 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge - Encriptador Alura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-800 text-white">
-    <header>
-        <h1 class="text-3xl font-bold underline">Encriptador Alura</h1>
+    <header class="flex justify-between items-center px-5 sm:px-8 py-5">
+        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura"
+            class="h-10 sm:h-12">
     </header>
-    <div class="flex">
-        <div class="w-full h-full mr-20">
-            <main class="flex-2">
-                <form>
-                    <div class="flex flex-col">
-                        <textarea name="texto" placeholder="Ingrese el texto aqui" id="texto" cols="8" rows="15"
-                            class="border-2 border-gray-600 rounded-lg bg-gray-700"></textarea>
-                    </div>
-                    <div>
-                        <p class="text-gray-400 my-2">🛈 Solo se aceptan minusculas y sin acentos</p>
-                    </div>
-                    <!--Center the buttons-->
-                    <div class="flex space-x-4 justify-center my-4">
-                        <input type="submit" value="Encriptar"
-                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" />
-                        <input type="submit" value="Desencriptar"
-                            class="bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded" />
-                    </div>
-                </form>
-            </main>
-        </div
-        >
-        <div class="flex-1">
-            <aside class="flex-1 ml-40 mr-40 items-center justify-center">
-                <section
-                    class="w-96 h-96 border-2 border-gray-600 rounded-lg bg-gray-700 flex flex-col items-center justify-center">
-                    <h2 class="text-2xl font-bold mb-4">Resultado</h2>
-                    <h3 class="text-xl font-bold mb-4">Ningún mensaje fue encontrado</h3>
-                    <p class="text-gray-400 text-center">Ingrese el texto que deseas encriptar o desencriptar.</p>
-                </section>
-            </aside>
-        </div>
-    </div>
+    <main class="flex flex-col lg:flex-row mx-auto mt-10 space-y-10 lg:space-y-0 lg:space-x-20 max-w-7xl px-4 sm:px-8">
+        <section class="w-full">
+            <h1 class="text-3xl font-bold underline text-center mb-4">Encriptador Alura</h1>
+            <form class="flex flex-col items-center">
+                <div class="w-full">
+                    <textarea name="texto" placeholder="Ingrese el texto aqui" id="texto" cols="8" rows="15"
+                        class="w-full border-2 border-gray-600 rounded-lg bg-gray-700"></textarea>
+                </div>
+                <p class="text-gray-400 mt-2">🛈 Solo se aceptan minusculas y sin acentos</p>
+                <div class="flex space-x-4 justify-center my-4">
+                    <input type="submit" value="Encriptar"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <input type="submit" value="Desencriptar"
+                        class="bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded">
+                </div>
+            </form>
+        </section>
+        <section class="w-full lg:w-1/2">
+            <div
+                class="flex flex-col h-full border-2 border-gray-600 rounded-lg bg-gray-700 items-center justify-center text-center">
+                <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura"
+                    class="h-20 sm:h-24">
+                <h3 class="text-xl font-bold my-4">Ningún mensaje fue encontrado</h3>
+                <p class="text-gray-400">Ingrese el texto que deseas encriptar o desencriptar.</p>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
-
