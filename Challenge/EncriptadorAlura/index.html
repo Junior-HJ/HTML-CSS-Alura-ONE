@@ -6,13 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge - Encriptador Alura</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-    @media (min-width: 640px) {
-        .my-640 {
-            margin-top: 160px;
-        }
-    }
-    </style>
+    <script src="/js/index.js"></script>
 </head>
 
 <body class="bg-gray-800 text-white bg-slate-900 text-gray-200">
@@ -29,23 +23,33 @@
                         <textarea name="texto" placeholder="Ingrese el texto aqui" id="texto" cols="8" rows="15"
                             class="w-full border-none bg-inherit pt-1 pl-1 outline-none resize-none text-3xl"></textarea>
                     </div>
-                    <p class="text-gray-400 mt-2">🛈 Solo se aceptan minusculas y sin acentos</p>
+                    <p class="text-gray-400 mt-2 mb-8">🛈 Solo se aceptan minusculas y sin acentos</p>
                     <div class="flex space-x-4 justify-center my-4">
-                        <input type="submit" value="Encriptar"
+                        <input id="encriptar" type="submit" value="Encriptar"
                             class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-3xl lg:py-3 lg:px-16 md:py-2 md:px-16 sm:py-2 sm:px-16 min-[200px]:py-2 min-[200px]:px-10 max-[200px]:py-2 max-[200px]:px-10">
-                        <input type="submit" value="Desencriptar"
+                        <input id="desencriptar" type="submit" value="Desencriptar"
                             class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded-3xl lg:py-3 lg:px-16 md:py-2 md:px-16 sm:py-2 sm:px-16 min-[200px]:py-2 min-[200px]:px-10 max-[200px]:py-2 max-[200px]:px-10">
                     </div>
                 </form>
             </div>
-            <div class="w-full lg:w-5/12 xl:w-5/12 items-center">
-                <div
-                    class="flex flex-col h-full border-0 border-gray-600 rounded-3xl bg-gray-800 justify-center items-center p-4">
-                    <div class="flex flex-col items-center text-center justify-center space-y-4 lg:my-60 xl:my-60">
-                        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura"
-                            class="h-20 sm:h-24">
+            <div class="w-full lg:w-5/12 xl:w-5/12">
+                <div class="flex flex-col h-full border-0 border-gray-600 rounded-3xl bg-gray-800 p-4">
+                    <div class="flex flex-col items-center text-center justify-center my-5 xl:my-40 2xl:my-50 md:my-5 sm:my-5 hidden">
+                        <img src="assets/nothing.png" alt="Logo Alura"
+                            class="h-40 xl:block 2xl:block lg:block">
                         <h3 class="text-xl font-bold my-4">Ningún mensaje fue encontrado</h3>
                         <p class="text-gray-400">Ingrese el texto que deseas encriptar o desencriptar.</p>
+                    </div>
+                    <div class="flex flex-col items-end justify-end items-center h-full">
+                        <div class="flex-1">
+                            <textarea name="salida" id="salida" class="w-full border-none bg-gray-500 pt-1 pl-1 outline-none resize-none text-3xl flex-grow"></textarea>
+                        </div>
+                        <div class="flex justify-center items-center my-4">
+                            <button
+                                class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded-3xl lg:py-3 lg:px-16 md:py-2 md:px-16 sm:py-2 sm:px-16 min-[200px]:py-2 min-[200px]:px-10 max-[200px]:py-2 max-[200px]:px-10"
+                                onclick="copyToClipboard('#salida')">Copiar</button>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
