@@ -19,12 +19,12 @@
             <div class="w-full">
                 <h1 class="text-4xl font-bold text-center mb-10">Encriptador Alura</h1>
                 <form class="flex flex-col">
-                    <div class="w-full">
+                    <div class="w-full h-80 2xl:h-full xl:h-full lg:h-full">
                         <textarea name="texto" placeholder="Ingrese el texto aqui" id="texto" cols="8" rows="15"
                             class="w-full border-none bg-inherit pt-1 pl-1 outline-none resize-none text-3xl"></textarea>
                     </div>
                     <p class="text-gray-400 mt-2 mb-8">🛈 Solo se aceptan minusculas y sin acentos</p>
-                    <div class="flex space-x-4 justify-center my-4">
+                    <div class="flex space-x-4 justify-center pb-4 2xl:pb-0 xl:pb-0 lg:pb-0 md:pb-4 sm:pb-4">
                         <input id="encriptar" type="submit" value="Encriptar"
                             class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-3xl lg:py-3 lg:px-16 md:py-2 md:px-16 sm:py-2 sm:px-16 min-[200px]:py-2 min-[200px]:px-10 max-[200px]:py-2 max-[200px]:px-10">
                         <input id="desencriptar" type="submit" value="Desencriptar"
@@ -33,32 +33,34 @@
                 </form>
             </div>
             <div class="w-full lg:w-5/12 xl:w-5/12">
-                <div class="flex flex-col h-full border-0 border-gray-600 rounded-3xl bg-gray-800 p-4">
-                    <div class="flex flex-col items-center text-center justify-center my-5 xl:my-40 2xl:my-50 md:my-5 sm:my-5 hidden">
-                        <img src="assets/nothing.png" alt="Logo Alura"
-                            class="h-40 xl:block 2xl:block lg:block">
-                        <h3 class="text-xl font-bold my-4">Ningún mensaje fue encontrado</h3>
+                <div class="flex flex-col h-full border-0 border-gray-600 rounded-3xl bg-gray-800">
+                    
+                    <div class="flex flex-col items-center text-center my-5 xl:my-40 2xl:my-40 lg:my-40 md:my-5 sm:my-5 space-y-2 hidden">
+                        <img src="assets/nothing.png" alt="Logo Alura" class="h-40 hidden xl:block 2xl:block lg:block">
+                        <h3 class="text-xl font-bold">Ningún mensaje fue encontrado</h3>
                         <p class="text-gray-400">Ingrese el texto que deseas encriptar o desencriptar.</p>
                     </div>
-                    <div class="flex flex-col items-end justify-end items-center h-full">
-                        <div class="flex-1">
-                            <textarea name="salida" id="salida" class="w-full border-none bg-gray-500 pt-1 pl-1 outline-none resize-none text-3xl flex-grow"></textarea>
-                        </div>
-                        <div class="flex justify-center items-center my-4">
+
+                    <div class="flex flex-col justify-between h-full p-4">
+                        <textarea name="salida" id="salida"
+                            class="w-full border-none bg-gray-500 pt-1 pl-1 outline-none resize-none text-3xl flex-grow" readonly></textarea>
+                        <div class="flex justify-end justify-center mt-2">
                             <button
-                                class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded-3xl lg:py-3 lg:px-16 md:py-2 md:px-16 sm:py-2 sm:px-16 min-[200px]:py-2 min-[200px]:px-10 max-[200px]:py-2 max-[200px]:px-10"
+                                class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded-3xl px-10 py-2 md:px-16 md:py-2 min-w-[200px] max-w-[200px]"
                                 onclick="copyToClipboard('#salida')">Copiar</button>
                         </div>
-                        
                     </div>
+                    
                 </div>
             </div>
+
         </section>
     </main>
 
-    <footer class="flex justify-center items-center p-4 xl:p-4 lg:p-4 md:p-4 sm:p-4 lg:absolute bottom-0 w-full">
-        <p class="text-gray-400">Challenge - Encriptador Alura</p>
+    <footer class="text-gray-400 flex justify-center items-center fixed bottom-0 left-0 right-0 p-4">
+        Challenge - Encriptador Alura
     </footer>
+
 
 </body>
 
