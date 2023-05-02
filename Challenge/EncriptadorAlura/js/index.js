@@ -51,7 +51,7 @@ function copyToClipboard() {
 }
 
 function validateString(texto) {
-    const regex = /^[a-zñ]+$/;
+    const regex = /^[a-zñ ]+$/;
     if (!regex.test(texto)) {
         alert('El texto debe tener solo letras minúsculas sin acentos');
         return false;
