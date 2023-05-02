@@ -10,6 +10,11 @@ function encrypt(encrypt = true) {
         'o': 'ober',
         'u': 'ufat'
     };
+    if (input.value === '') {
+        alert('Ingrese un texto');
+        return;
+    }
+    
     if (!validateString(input.value)) {
         input.value = '';
         return;
