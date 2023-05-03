@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge - Encriptador Alura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/index.js"></script>
+</head>
+
+<body class="bg-gray-800 text-white bg-slate-900 text-gray-200">
+    <header class="flex justify-between items-center px-5 sm:px-8 py-5">
+        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" class="h-10 sm:h-12">
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 sm:px-8">
+        <section class="flex flex-col lg:flex-row lg:space-x-20">
+            <div class="w-full">
+                <h1 class="text-4xl font-bold text-center mb-10">Encriptador Alura</h1>
+                <div class="flex flex-col">
+                    <div class="w-full h-80 2xl:h-full xl:h-full lg:h-full">
+                        <textarea name="texto" placeholder="Ingrese el texto aqui" id="input-text" cols="8" rows="15"
+                            class="w-full border-none bg-inherit pt-1 pl-1 outline-none resize-none text-3xl"></textarea>
+                    </div>
+                    <p class="text-gray-400 mt-2 mb-8">🛈 Solo se aceptan minusculas y sin acentos</p>
+                    <div class="flex space-x-4 justify-center pb-4 2xl:pb-0 xl:pb-0 lg:pb-0 md:pb-4 sm:pb-4">
+                        <button id="encriptar" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-3xl lg:py-3 lg:px-16 md:py-2 md:px-16 sm:py-2 sm:px-16 min-[200px]:py-2 min-[200px]:px-10 max-[200px]:py-2 max-[200px]:px-10" onclick="encrypt(true)">Encriptar</button>
+
+                        <button id="desencriptar" class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded-3xl lg:py-3 lg:px-16 md:py-2 md:px-16 sm:py-2 sm:px-16 min-[200px]:py-2 min-[200px]:px-10 max-[200px]:py-2 max-[200px]:px-10" onclick="encrypt(false)">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-5/12 xl:w-5/12">
+                <div class="flex flex-col h-full border-0 border-gray-600 rounded-3xl bg-gray-800">
+                    
+                    <div class="flex flex-col items-center text-center my-5 xl:my-40 2xl:my-40 lg:my-40 md:my-5 sm:my-5 space-y-2" id="nothing">
+                        <img src="assets/nothing.png" alt="Logo Alura" class="h-40 hidden xl:block 2xl:block lg:block">
+                        <h3 class="text-xl font-bold">Ningún mensaje fue encontrado</h3>
+                        <p class="text-gray-400">Ingrese el texto que deseas encriptar o desencriptar.</p>
+                    </div>
+
+                    <div class="flex flex-col justify-between h-full p-4 hidden" id="result">
+                        <textarea name="salida" id="output-text"
+                            class="w-full border-none bg-inherit pt-1 pl-1 outline-none resize-none text-3xl flex-grow" readonly></textarea>
+                        <div class="flex justify-end justify-center mt-2">
+                            <button
+                                class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded-3xl px-10 py-2 md:px-16 md:py-2 min-w-[200px] max-w-[200px]"
+                                onclick="copyToClipboard()">Copiar</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+        
+    </main>
+    
+    <footer class="text-gray-400 flex justify-center items-center fixed bottom-0 left-0 right-0 p-4">
+        Copyright © 2023 - Hecho por <a href="https://github.com/Junior-HJ/"
+            class="text-blue-500 hover:text-blue-700">Junior-HJ</a>
+    </footer>
+
+
+</body>
+
+</html>
